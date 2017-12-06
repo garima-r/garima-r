@@ -1,0 +1,83 @@
+img{
+    margin: 4px;
+    display: block;
+	width: 40%;
+	height:20%;
+	position: relative;
+    left: 30%;
+}
+button[type=submit] {
+    height:5%;
+	width: 13%;
+    background-color:#FFA500;       
+    color: white;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button[type=submit]:hover {
+    background-color:#FF8C00; 
+}
+button[type=close] {
+    height:5%;
+	width: 13%;
+    background-color:#FFA500;        
+    color: white;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;  
+}
+button[type=close]:hover {
+    background-color:#FF8C00; 
+}
+#popup{
+	height:6%;
+	width: 6%;
+    background-color:#FFA500;       
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 85%;
+}
+#logout{
+	height:6%;
+	width: 7%;
+    background-color:#FFA500;       
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 85%;
+}
+input[type=date]{
+
+    width: 30%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+input[type=text]{
+
+    width: 70%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+   
+}

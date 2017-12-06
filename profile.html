@@ -1,0 +1,51 @@
+<!-- This page contains the layout of profile page of the user along with the edit and logout functionality-->
+
+<!DOCTYPE>
+<html>
+<head> 
+	<meta charset="utf-8"/>
+	<title> User Profile</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/profile.css"/>
+	<script src="/static/js/update.js"></script>
+</head>
+<body>
+
+ <div style="background-color:grey; max-height:95px;">
+ 	<h1 style="text-align: center; color:white;padding: 20px 14px;">Profile Information </h1>
+	<button id="popup" onClick="div_show()"> EDIT </button>
+		
+	<form action="/logout" method="POST"> 
+		<button type="submit" id="logout" > LOGOUT </button>
+	</form>
+</div><br/><br/>
+
+<div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center;">
+	<img src="/static/img/profile.jpg" alt="Profilelogo">
+  	<h1>{{.FirstName}} {{.LastName}}</h1>
+  	<p style=" color: grey; font-size: 18px; margin-left:2px;">DOB: {{.Dob}}</p>
+  	<p style=" color: grey; font-size: 18px; margin-left:2px;">GENDER: {{.Gender}} </p>
+  	<p style=" color: grey; font-size: 18px; margin-left:2px;">EMAIL: {{.Email_Id}}</p>
+</div>
+
+<div id="updateprofile" style="display:none">
+	<!-- Popup Div Starts Here -->
+	<div id="popupform" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 600px; margin: auto; text-align: center;">
+	<!-- Profile Update  Form -->
+		<form action="/profile-save" id="updateform" method="POST" name="form">
+			<div style="background-color:grey;">
+					<h2 style="text-align: center; color:white;padding-top:10px;padding-bottom:5px;"> Update </h2>
+			</div>
+	
+			<input type="text" id="Fname" name="fn" placeholder="FirstName">
+			<input type="text" id="Lname" name="ln" placeholder="LastName">
+			<input type="date" id="Dob" name="dob"><br/><br/>
+
+			<button type="submit" id="submit">SAVE </button>
+			<button type="close" id="close" onClick ="div_hide()"> CLOSE </button>
+		</form>
+	</div>
+	<!-- Popup Div Ends Here -->
+</div>
+	<!-- Display Popup Button -->
+</body>
+</html>
